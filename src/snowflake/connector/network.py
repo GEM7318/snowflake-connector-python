@@ -18,8 +18,6 @@ from threading import Lock
 
 import OpenSSL.SSL
 
-from snowflake.connector.time_util import get_time_millis
-
 from . import ssl_wrap_socket
 from .compat import (
     BAD_GATEWAY,
@@ -76,7 +74,7 @@ from .sqlstate import (
     SQLSTATE_IO_ERROR,
 )
 from .telemetry_oob import TelemetryService
-from .time_util import DEFAULT_MASTER_VALIDITY_IN_SECONDS, DecorrelateJitterBackoff
+from .time_util import DEFAULT_MASTER_VALIDITY_IN_SECONDS, DecorrelateJitterBackoff, get_time_millis
 from .tool.probe_connection import probe_connection
 from .vendored import requests
 from .vendored.requests.adapters import HTTPAdapter
